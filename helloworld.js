@@ -54,6 +54,68 @@ var f_4 = !b;	  // FALSE
 
 //----------- Part 6
 // equal operator (NOTE)
+// we can do the following:
+var a_5 = 12		// number
+a_5 = '12'		// string
+b_5 = 12		// number
 
-//return value to console
-console.log(c_3)
+var bool1_5 = a_5 == b_5		// true, both value of them is 12
+var bool2_5 = a_5 === b_5		// false, string type and number type
+
+
+//----------- Part 7
+// condition
+// (condition is similar with others languague)
+
+//----------- Part 8
+// switch case
+// (switch case is similar with others languague)
+
+
+//----------- Part 9
+// function
+function check_the_result(a, b) {
+    if (a == b)
+        return 'dung roi ban oi'
+    else
+        return 'sai roi ban oi'
+}
+
+// function with default value
+function check_the_messages(message) {
+    message = message || 'don\'t have any message'
+    return message
+}
+
+
+//----------- Part 10
+// local var and global
+// is similar with others languague
+
+
+//----------- Part 11
+// setTimeout and setInterval
+
+// console will log 'hello world' after 3s
+/*
+var helloworld = setTimeout(function() {
+    console.log('hello world')	// statement
+    clearTimeout(helloworld)	// clear timeout
+}, 3000)
+*/
+
+// interval function is similar timeout but it is infinity loops.
+// log 'hello earth' every 2s
+/*
+var helloearth = setInterval(function() {
+    console.log('hello earth')
+    clearInterval(helloearth)	// log 1 times and exit function
+},2000)
+*/
+
+
+//----------- Part 11
+// loop, while, do - while, break and continue
+// is similar with others languague
+
+//return value to consol
