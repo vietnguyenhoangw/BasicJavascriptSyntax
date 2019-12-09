@@ -118,4 +118,4 @@ var helloearth = setInterval(function() {
 // loop, while, do - while, break and continue
 // is similar with others languague
 
-//return value to consol
+//return value to console

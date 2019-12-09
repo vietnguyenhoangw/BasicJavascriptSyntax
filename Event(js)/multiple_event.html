@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>multiple event</title>
+</head>
+<body>
+
+	<!-- docs: https://freetuts.net/them-su-kien-event-bang-javascript-373.html -->
+
+	<ul>
+	  <li><a href="#" onclick="do_something()">Tin công nghệ</a></li>
+	  <li><a href="#" onclick="do_something()">Tin trong nước</a></li>
+	  <li><a href="#" onclick="do_something()">Tin thời sự</a></li>
+	</ul>
+
+	<!-- 
+		
+		We cant add onClick event to each html tag because it spend a lot of time
+		the way to save ur time is using the following way:
+
+		elementObject.eventName  = function(){
+		    // do something
+		};	
+
+	 -->
+
+	<input type="button" id="show-btn" value="Click me" />
+
+	<ul>
+        <li><a href="#" class="show">Tin công nghệ</a></li>
+        <li><a href="#" class="show">Tin trong nước</a></li>
+        <li><a href="#" class="show">Tin thời sự</a></li>
+    </ul>  
+      
+    <script language="javascript">
+        // Lấy đối tượng
+        var button = document.getElementById("show-btn");
+         
+        // Thêm sự kiện cho đối tượng
+        button.onclick = function()
+        {
+          alert("Bạn vừa click vào button");
+        };
+
+        // Lấy đối tượng
+        var a_list = document.getElementsByClassName("show");
+         
+        // Lặp và gán sự kiện
+        for (var i = 0; i < a_list.length; i++){
+            a_list[i].onclick = function()
+            {
+                alert('Xin chào, bạn vừa click vào tôi')
+                // return false để khỏi reload trang
+                return false
+            };
+        }
+    </script>
+
+</body>
+</html>
