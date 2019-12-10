@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Onload</title>
+</head>
+<body>
+	<!-- 
+		docs: https://freetuts.net/su-kien-onload-trong-javascript-378.html 
+		Javascript code will be excuted from above to bellow.
+	-->
+
+	<script type="text/javascript">
+		window.onload = function()
+		{
+		    alert(3);   
+		};
+		 
+		alert(2);
+
+		alert(1);
+
+		// but if we add onload to this function, when the js compile from above to bellow
+		// alert 3 is still compile
+	</script>
+</body>
+</html>
