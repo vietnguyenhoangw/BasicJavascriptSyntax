@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add event listener</title>
+</head>
+<body>
+	<!-- 
+		docs: https://freetuts.net/ham-addeventlistener-trong-javascript-374.html
+
+		Using addEventListener() to add a event to HTML
+		Part2's advance way.
+
+		/**
+        syntax:
+
+		elementObject.addEventListener('eventName', function(e){
+    		// do something
+		});
+
+		**/
+	 -->
+
+	 <!-- ex1 -->
+	<b>Print the value in the input box:</b><br>	
+	<input type="text" id="txt-val" value="" />
+    <div id="result"></div>
+    <br><br>
+
+	 <!-- ex2 -->
+	<b>Print the value in the input box but just get 5 character:</b><br>	
+    <input type="text" id="txt-val-2" value="" />
+    <div id="result-2"></div>
+    <br><br>
+
+    <!-- ex3 -->
+	<b>Set aguments to event in addEventListener()</b><br>
+    <Button id="btn" value="">Click here!</Button>
+
+	<script type="text/javascript">
+
+		// EX - 1
+		// Lấy đối tượng
+        var input1 = document.getElementById("txt-val");
+
+		// Thêm sự kiện cho đối tượng
+        input1.addEventListener('keyup', function(){
+            // Gán giá trị vào div
+            // Thuộc tính innerHTML giúp set, hoặc get đoạn mã HTML của một phần tử nào đó trên trang web.
+            document.getElementById('result').innerHTML = input1.value;
+        });
+
+        // EX - 2
+		// Lấy đối tượng
+        var input2 = document.getElementById("txt-val-2");
+         
+        // Thêm sự kiện cho đối tượng
+        input2.addEventListener('keyup', function(){
+            // Gán giá trị vào div
+            document.getElementById('result-2').innerHTML = input2.value;
+        });
+       
+        // Bổ sung hành động nữa
+        input2.addEventListener('keyup', function(){
+            if (input2.value.length > 5){
+                alert("Bạn đã nhập nhiều hơn 5 ký tự");
+            }
+        });
+
+        // EX - 3
+        // Lấy đối tượng
+		var button = document.getElementById("btn");
+		 
+		// Thêm sự kiện cho đối tượng
+		button.addEventListener('click', function(){
+		    do_something(2, 3);
+		});
+		 
+		function do_something(a, b)
+		{
+			alert(a + b);
+		}
+	</script>
+</body>
+</html>
